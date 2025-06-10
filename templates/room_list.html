@@ -1,0 +1,16 @@
+{% extends 'template.html' %}
+
+{% block content %}
+
+<h2>Наші кімнати</h2>
+
+
+<ul class="list-group">
+  {% for book in books %}
+    <li class="list-group-item">
+      <strong>{{ room.name }}</strong> — {{ room.type_room }}
+    </li>
+  {% empty %}
+    <li class="list-group-item"> Немає книг. </li>
+  {% endfor %}
+</ul>
